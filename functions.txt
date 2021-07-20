@@ -1,0 +1,35 @@
+fibonacci 0 := 0;
+fibonacci 1 := 1;
+fibonacci n := fibonacci (n-1) + fibonacci (n-2);
+
+fib n := if (n < 3) then {
+           1
+ 	 } else {
+	   fib (n-1) + fib (n-2)
+  	 };
+
+sum 0 := 0;
+sum a := sum (a-1) + a;
+
+div x y :=
+   if (x < y) then
+     {
+       0
+     } else {
+       1 + div ((x-y), y)
+     };
+
+twice f x := f (f (x));
+trice f x := f (f (f (x)));
+fours f x := f (f (f (f (x))));
+double a := a*2; 
+
+add x y := x + y;
+inc := add (1);
+eleven := inc (10);
+
+fourty := twice (double, 10);
+eighty := trice (double, 10);
+hunsixty := fours (double, 10);
+
+main := div (999, 2);
